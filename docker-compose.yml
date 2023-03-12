@@ -23,8 +23,8 @@ services:
   mysql:
     image: mysql:5
     environment:
-      - MYSQL_DB=my_store
-      - MYSQL_USER=dieguidev
+      - MYSQL_DATABASE=my_store
+      - MYSQL_USER=root
       - MYSQL_ROOT_PASSWORD=021087Mikeyla
       - MYSQL_PORT=3306
     ports:
