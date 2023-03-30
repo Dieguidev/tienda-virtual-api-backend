@@ -32,7 +32,8 @@ const getProductSchema = Joi.object({
 
 const queryProductSchema = Joi.object({
   limit,
-  offset
+  offset,
+  price
 })
 
 module.exports = { createProductSchema, updateProductSchema, getProductSchema, queryProductSchema }
