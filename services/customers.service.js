@@ -26,6 +26,7 @@ class CustomerService {
     const newCustomer = await models.Customer.create(data, {
       include: ['user']  //este codigo hace la creacion del customer y el user de una soal
     });
+    delete newCustomer.user.dataValues.password;
     return newCustomer;
   }
 
