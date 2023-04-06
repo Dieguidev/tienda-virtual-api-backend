@@ -10,14 +10,14 @@ async function sendMail() {
     secure: true, // true for 465, false for other ports
     port: 465,
     auth: {
-      user: 'diegogaraycullas@gmail.com',
-      pass: config.appCode
+      user: config.smtpEmail,
+      pass: config.smtpPassword
     }
   });
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: 'diegogaraycullas@gmail.com', // sender address
+    from: config.smtpEmail, // sender address
     to: "diegogaraycullas@gmail.com", // list of receivers
     subject: "Este es correo de prueba", // Subject line
     text: "Hello world?", // plain text body
